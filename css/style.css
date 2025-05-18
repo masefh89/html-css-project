@@ -33,7 +33,7 @@ body {
     font-weight: normal;
     line-height: 1.6em;
     padding: 1rem;
-    max-width: 800px;
+    
     margin: 0 auto;
     margin-top: 50px;
 }
@@ -216,5 +216,10 @@ color: aqua;}
     content: attr(data-label);
     font-weight: bold;
     text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .main_content {
+    max-width:100%; /* or any wider value like 90% or 100% */
   }
 }
