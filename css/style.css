@@ -12,14 +12,11 @@ margin: 0;
 padding: 0;}
 body {
     background-color:hsl(0, 67%, 4%);
-    
-
-    margin: 0;
-    
+    margin: 0; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 60px;
+    padding-top: 0;
     
 }
 
@@ -38,27 +35,15 @@ body {
     padding: 1rem;
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
-hr {
-  width: 100%;
-  border: 0;
-  height: 0.5px;
-  background: #494948;
-  opacity: 0.8;
-  margin: 20px 0;
-  padding: 0;
-}
+
 
 
 .navbar {
-    /* Positioning */
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
-
     /* Your existing styles - MUST KEEP THESE */
     align-items: center;
     display: flex;
@@ -95,7 +80,15 @@ hr {
 }
 
 
-
+hr {
+  width: 100%;
+  border: 0;
+  height: 0.5px;
+  background: #494948;
+  opacity: 0.8;
+  margin: 20px 0;
+  padding: 0;
+}
 
 img{width: 40px;
 border-radius: 5px;}
@@ -161,6 +154,8 @@ color: aqua;}
   .navbar {
     padding: 10px 15px;
     flex-wrap: wrap;
+    position: sticky; /* Makes navbar stick to top without overlapping */
+    top: 0;
   }
   
   .nav-links {
