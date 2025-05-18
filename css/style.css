@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html, body{height: 100%;
+margin: 0;
+padding: 0;}
+body {
+    background-color:hsl(0, 67%, 4%);
+    
+
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px;
+    
+}
+
+
+
+.main_content{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(233, 239, 240);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    font-weight: normal;
+    line-height: 1.6em;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 0.5px;
+  background: #494948;
+  opacity: 0.8;
+  margin: 20px 0;
+  padding: 0;
+}
+
+
+.navbar {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    /* Your existing styles - MUST KEEP THESE */
+    align-items: center;
+    display: flex;
+    padding: 5px 20px;
+    background-color: rgb(28, 158, 28);
+    justify-content: space-between;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* New additions for better behavior */
+    box-sizing: border-box; /* Prevents width overflow */
+    margin: 0; /* Reset default margins */
+    
+}
+.nav-links{list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links li{display: inline;}
+
+.nav-links a{color:rgb(7, 6, 4);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+}
+
+.navbar a:hover{color: rgb(130, 19, 41);
+    background: #0c1012;
+    border-radius:10%;
+}
+
+
+
+
+img{width: 40px;
+border-radius: 5px;}
+
+
+
+
+.headings {padding-bottom: 0;
+color: blanchedalmond;
+margin-bottom: 0;
+margin-top: 3%;}
+
+.job-title{font-weight: bold;}
+
+
+.ul_list{
+  list-style-type: disc;
+  color: lightgreen;
+}
+
+.nested_list{
+  color: rgb(250, 108, 132);
+
+}
+
+.footer{background-color: rgb(1, 27, 1);
+    text-align: center;
+    
+    border: 1px solid #333;
+    padding:0;
+    margin-top: auto;
+}
+
+
+table {
+    width:100% ;
+    min-width: 600px;
+   
+}
+
+table, th, td {
+  
+  text-align: left;
+  border: 1px solid #494948;
+  border-collapse: collapse;
+}
+
+
+th {
+  background-color: rgba(28, 158, 28, 0.1);
+  text-align: center;
+  padding: 10px;
+}
+td{
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #5e2b5e;
+color: aqua;}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .nav-links a {
+    display: block;  
+    padding: 8px 0;
+    font-size: 18px;
+  }
+  
+  body {
+    padding: 0.5rem 2%;
+  }
+  
+  .headings {
+    font-size: 1.3rem;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    max-width: 80px;
+  }
+}
