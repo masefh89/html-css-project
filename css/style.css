@@ -125,8 +125,14 @@ margin-top: 3%;}
 
 table {
     width:100% ;
-    min-width: 600px;
+    min-width: 100%;
+    border-collapse: collapse;
    
+}
+
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 table, th, td {
@@ -184,5 +190,28 @@ color: aqua;}
 @media (max-width: 480px) {
   img {
     max-width: 80px;
+  }
+}
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  td:before {
+    position: absolute;
+    left: 6px;
+    content: attr(data-label);
+    font-weight: bold;
   }
 }
