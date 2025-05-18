@@ -195,6 +195,7 @@ color: aqua;}
 @media (max-width: 600px) {
   table, thead, tbody, th, td, tr {
     display: block;
+    text-align: left;
   }
   
   thead tr {
@@ -205,7 +206,8 @@ color: aqua;}
   
   td {
     position: relative;
-    padding-left: 50%;
+    padding-left: 10%;
+    text-align: left;
   }
   
   td:before {
@@ -213,5 +215,6 @@ color: aqua;}
     left: 6px;
     content: attr(data-label);
     font-weight: bold;
+    text-align: left;
   }
 }
